@@ -1,0 +1,19 @@
+name: "Set Issue Label and Assignee"
+on:
+  issues:
+    types:
+        - opened
+        - reopened
+        - edited
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: juliuspf/issue-action
+        with:
+          title-or-body: "body"
+          parameters: '[ {
+          "keywords": ["Reliability"], "assignees": ["juliuspf"]},{
+          "keywords": ["Factor"], "assignees": ["juliuspf"]}]'
+          github-token: "${{ secrets.GITHUB_TOKEN }}"

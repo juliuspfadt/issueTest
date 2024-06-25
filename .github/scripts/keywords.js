@@ -4,12 +4,13 @@ module.exports = function () {
   const keywords = {
     modules: [
       ["Unrelated", "", "boutinb"],
+      ["Acceptance Sampling", "Module: jaspAcceptanceSampling", "pankajrsingla"],
       ["ANOVA", "Module: jaspAnova", "JohnnyDoorn"],
       ["Audit", "Module: jaspAudit", "koenderks"],
       ["Bain", "Module: jaspBain", "koenderks"],
       ["Bsts", "Module: jaspBsts", "vandenman"],
-      ["Circular", "Module: jaspCircular", "Kucharssim"],
-      ["Cochrane", "Module: jaspCochrane", "FBartos"],
+      ["Circular Statistics", "Module: jaspCircular", "Kucharssim"],
+      ["Cochrane Meta-Analyses", "Module: jaspCochrane", "FBartos"],
       ["Descriptives","Module: jaspDescriptives", "vandenman"],
       ["Distributions","Module: jaspDistributions", "Kucharssim"],
       ["Equivalence T-Tests","Module: jaspEquivalenceTTests", "Jillderon"],
@@ -19,8 +20,9 @@ module.exports = function () {
       ["Learn Bayes", "Module: jaspLearnBayes", "Kucharssim"],
       ["Machine Learning","Module: jaspMachineLearning", "koenderks"],
       ["Meta Analysis","Module: jaspMetaAnalysis", "FBartos"],
-      ["Mixed Models","Module: jaspMetaAnalysis", "FBartos"],
+      ["Mixed Models","Module: jaspMixedModels", "FBartos"],
       ["Network","Module: jaspNetwork", "vandenman"],
+      ["Power", "Module: jaspPower", "jansim"],
       ["Prophet","Module: jaspProphet", "Kucharssim"],
       ["Quality Control","Module: jaspQualityControl", "vandenman"],
       ["Regression","Module: jaspRegression", "Kucharssim"],
@@ -29,8 +31,8 @@ module.exports = function () {
       ["Summary Statistics","Module: jaspSummaryStatistics", "akashrajkn"],
       ["T-Tests","Module: jaspTTests", "vandenman"],
       ["Visual Modeling","Module: jaspVisualModeling", "dustinfife"],
-      ["Other Module", "", "Kucharssim"],
-      ["_No response_", "", "AlexanderLyNL"]
+      ["Other", "", "Kucharssim"],
+      ["_No response_", "", "EJWagenmakers"]
     ], 
     oses: [
       ["macOS Intel", "OS: macOS Intel"],

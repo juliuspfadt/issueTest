@@ -1,5 +1,6 @@
 name: Bug Report
 description: File a bug report
+labels: Bug
 title: "[Bug]: "
 body:
   - type: markdown
@@ -24,6 +25,11 @@ body:
         - 0.16.2
         - 0.16.3
         - 0.16.4
+        - 0.17.0
+        - 0.17.1
+        - 0.17.2
+        - 0.17.2.1
+        - 0.17.3
     validations:
       required: true
   - type: input
@@ -42,12 +48,13 @@ body:
       multiple: true
       options:
         - Unrelated
+        - Acceptance Sampling
         - ANOVA
         - Audit
         - Bain
         - Bsts
-        - Circular
-        - Cochrane
+        - Circular Statistics
+        - Cochrane Meta-Analyses
         - Descriptives
         - Distributions
         - Equivalence T-Tests
@@ -59,6 +66,7 @@ body:
         - Meta Analysis
         - Mixed Models
         - Network
+        - Power
         - Prophet
         - Quality Control
         - Regression
@@ -67,7 +75,7 @@ body:
         - Summary Statistics
         - T-Tests
         - Visual Modeling
-        - Other Module
+        - Other
     validations:
       required: true
   - type: input

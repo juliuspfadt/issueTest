@@ -22,15 +22,30 @@ on:
     types: 
       - opened
       - reopened
-      - edited
 
 jobs:
-  Feature-label-and-assign:
-      runs-on: ubuntu-latest
-      steps:
-      - uses: actions/checkout@v2
+  Bug-label-and-assign:
+    runs-on: ubuntu-latest
+    if: ${{ contains(github.event.issue.labels.*.name, 'Bug') }}
+    steps:
+      - uses: actions/checkout@v3
       - uses: actions/github-script@v6
         with:
           script: |
-            console.log(context);
-      
+            const keyFun = require('./.github/scripts/keywords.js');
+            const keywords = keyFun();
+            const script = require('./.github/scripts/bug_labelAssign.js');
+            script({github, context}, keywords);
+
+  Feature-label-and-assign:
+      runs-on: ubuntu-latest
+      if: ${{ contains(github.event.issue.labels.*.name, 'Feature Request') }}
+      steps:
+        - uses: actions/checkout@v3
+        - uses: actions/github-script@v6
+          with:
+            script: |
+              const keyFun = require('./.github/scripts/keywords.js');
+              const keywords = keyFun();
+              const script = require('./.github/scripts/feature_labelAssign.js');
+              script({github, context}, keywords);

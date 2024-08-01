@@ -29,4 +29,5 @@ module.exports = async function ({github, context}) {
       body: comment
     });
   };
+  console.log(body)
 }

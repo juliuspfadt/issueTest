@@ -30,5 +30,4 @@ module.exports = async function ({github, context}) {
     });
   };
   console.log(body);
-  console.log(!regex.test(body))
 }

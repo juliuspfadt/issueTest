@@ -29,4 +29,6 @@ module.exports = async function ({github, context}) {
       body: comment
     });
   };
+  console.log(body);
+  console.log(!regex.test(body))
 }

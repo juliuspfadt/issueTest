@@ -8,17 +8,15 @@ module.exports = async function ({github, context}) {
   const body = issue.data.body;
   // if any of these string are in the issue body, then there was a user upload, 
   // the first string covers all the image/video files
-  const regex = /user-attachments/;
+  const regex = /\.log/; // Updated regex to remove "user-attachments"
   if (!regex.test(body)) {
     const comment = "@" + issue.data.user.login +
-      ", thanks for taking the time to create this issue. \
-      If possible (and applicable), please upload to the issue website (" 
+      ", thanks for taking the time to create this report. \
+      Please upload to the issue website (" 
       + issue.data.html_url +
-      ", attaching to an email does not work) a screenshot showcasing the problem, and/or \
-      a compressed (zipped) .jasp file or the data file \
-      that causes the issue. If you would prefer not to make your \
-      data publicly available, you can send your file(s) directly to us,\
-      issues@jasp-stats.org";
+      ", attaching to an email does not work) the **log files** from JASP. \
+      For more information read our [Logging Guide](https://github.com/jasp-stats/jasp-desktop/blob/stable/Docs/user-guide/logging-howto.md) \
+      page to learn where to (and how to) find JASP log files.";
 
     github.rest.issues.createComment({
       issue_number: context.issue.number,

@@ -1,6 +1,8 @@
 
 # The script consists of several steps:
-# Remove the waiting for requester label, if the requester posts a comment
+# 1. Add the duplicate label is a comment is posted containing 
+# "duplicate of"
+# 2. Remove the waiting for requester label, if the requester posts a comment
 # in an issue with the label.
 
 # so far this workflow works best with the bug_template. 
